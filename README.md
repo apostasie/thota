@@ -3,7 +3,7 @@
 > “garden” (borrowed from the Telugu tōṭa)
 > 
 > short for "take-home-take-away": a tool to turn Google map lists take-out into portable data
-> that can be then imported into other maps applications.
+> that can then be imported into other maps applications.
 
 Google take-out feature is insultingly bad for actually exporting your maps lists:
 (broken) CSV files only contain the barebone names of places, alongside a Google Maps URL.
@@ -25,11 +25,13 @@ This project aims to fix that situtation by providing a tool able to export mean
 
 ## Usage
 
+You need golang installed to run this tool. Right now, I am not distributing pre-built binaries.
+
 ### Export from Google take-out
 
 **MAKE SURE YOU REVIEW GOOGLE PRICING BEFORE DOING ANYTHING (READ BELOW).**
 
-- export your Google Maps lists using the [Google Takeout](https://takeout.google.com/) feature
+- export your Google Maps lists using the [Google Takeout](https://takeout.google.com/) feature (the only section you need is "Saved")
 - get a Google Maps API key
 - run the `takeout` command with the path to your exported data and your API key:
 
@@ -81,7 +83,8 @@ places in your list, you will _very quickly_ incur a significant bill.
 I personally find Google pricing absolutely outrageous (about 10 times what competitors charge).
 
 WeGo pricing model is much more reasonable, and their free tier is generous enough, so, it is less likely
-you will run in trouble on that part. Nevertheless, you should still review their pricing model and keep an eye on your usage.
+you will run in trouble on that part.
+Nevertheless, you should still review their pricing model and keep an eye on your usage.
 
 ## Disclaimer and caveats
 
@@ -89,7 +92,7 @@ This project is not affiliated with Google or WeGo in any way.
 Stressing again: it is your responsibility to review the pricing of the services you use.
 
 Also, there are many, many issues with the WeGo API.
-Geocoding is not reliable, and will return wildly out results, or no results at all (while there is in their map).
+Geocoding is not reliable, and will return wildly out results, or no results at all (while these places exist on their map).
 
 Thota tries its best to handle these issues, but it is not perfect, and there is only so much that
 can be done with the available APIs.
